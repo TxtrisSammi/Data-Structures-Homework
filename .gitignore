@@ -1,8 +1,11 @@
-hw3/
+*.pdf
 *.aux
 *.flsgi
 *.gz
 *.log
 *.out
+*.fls
+*.fdb_latexmk
+/media/
+code/hw3/
 *.bin
-*.pdf
