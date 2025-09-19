@@ -6,5 +6,4 @@
 *.out
 *.fls
 *.fdb_latexmk
-/media/
 *.bin
