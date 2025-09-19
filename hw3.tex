@@ -24,16 +24,28 @@
 Perform a search for the term, ``recursion''. Why did you misspell
 it? What happened?
 
+\begin{sol}
+  I didn't misspell it. However, Google was recursively calling the "did you mean: recursion" meaning that it will 
+  always look like you misspelled it.
+\end{sol}
+
 \question\label{vid} Watch the YouTube video \computerphile. Did you
 learn something new? Can you think of something where you might opt
 for recursion over loops?
+
+\begin{sol}
+  I have already seen the video before, so I can't say I learned anything new from rewatching it.
+  I would opt for recursion over loops for something that should reference itself. 
+  Things like the Fibonnacci sequence, binary search, and merge sort are all examples of algorithms that reference themselves,
+  making it logical to use recursion when implementing those algorithms.
+\end{sol}
 
 \question Write a \texttt{public class Sorter} in Java that implements the
 Java interface\footnote{Java interfaces are just abstract classes
   where all the interface methods are left to be implemented.
   Furthermore, a Java class may implement more than one interface
   but inherit from only one parent class.} given in listing
-\ref{intr}. The sorter class may not have any methods other than
+??. The sorter class may not have any methods other than
 those which exist in the Godric's Hat interface.
 
 % \lstinputlisting[
@@ -86,6 +98,10 @@ then compile and run. Change the \texttt{int n = 7;} within
 \texttt{Test.java} to a bigger number once it works for smaller
 ones.
 
+\begin{sol}
+  Done!
+\end{sol}
+
 \question\label{plot} \download{} the experiment class. Place it in
 the same directory as the \texttt{Sorter.java} and the interface
 \texttt{GodricsHat.java} and run,
@@ -121,15 +137,39 @@ Other than that, the simplest way is to use
 \url{https://www.desmos.com} or however\footnote{Do not draw any
   plots by hand.} you do plots.
 
+\begin{sol}
+  Done!
+\end{sol}
+
 \question Analyse the plots from question \ref{plot}. Which algorithm was the worst? Does it match its asymptotic runtime upper-bound? Did any of our implementations beat Java's built-in sorting algorithm?
+\begin{sol}
+  \begin{enumerate}
+    \item Insertion sort was the worst.
+    \item Insertion sort did match it's asymptotic runtime upper-bound.
+    \item The counting sort beat Java's built in algorithm.
+  \end{enumerate}
+\end{sol}
 
 \question Can you implement the quick sort algorithm without recursion or an
 explicit stack?
 
+\begin{sol}
+  No.
+\end{sol}
+
 \question Around nine minutes in the video from question \ref{vid}, Brady asks professor Brailsford about a more real life use-case of recursion where it is not just nice for implementation's sake but also makes the runtime better. Do you now have an answer for such a use-case?
+
+\begin{sol}
+  Writing sorting algorithms such as merge/quick sort is significantly easier when using recursion as opposed to loops.
+\end{sol}
 
 \question Among the ones you implemented, which algorithm do you still think
 you don't quite understand? Why?
+
+\begin{sol}
+  I don't know if I fully understand the quick sort yet. I just don't understand what the algorithm is doing/what makes it as quick as it is. 
+  I know the steps it is taking, but I don't understand them.
+\end{sol}
 
 \section*{Submission Instructions}
 
@@ -139,5 +179,8 @@ you don't quite understand? Why?
         not change anything in either \texttt{Experiment.java} or
         \texttt{GodricsHat.java}, there is no need to turn those in.
 \end{enumerate}
+
+\img<img>[0.65]{Submission Image 1}{media/plot1.png}
+\img<img1>[0.65]{Submission Image 1}{media/plot2.png}
 
 \end{document}
