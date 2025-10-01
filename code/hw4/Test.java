@@ -1,6 +1,6 @@
 public class Test {
     public static void main(String[] args) {
-        Structure<Integer> st = new Stack<Integer>();
+//        Structure<Integer> st = new Stack<Integer>();
         Structure<Integer> qu = new Queue<Integer>();
         
         for (int i = 0; i < 10; i++) {

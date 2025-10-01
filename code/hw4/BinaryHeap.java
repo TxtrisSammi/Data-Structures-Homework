@@ -75,6 +75,11 @@ public class BinaryHeap<T extends Comparable<T>> {
 
   private void heapifyUp(Node<T> v) {
     // implement me
+    if (v.parent == null || v.compareTo(v.parent) >= 0) {
+      return;
+    }
+    v.swap(v.parent);
+    heapifyUp(v.parent);
   }
 
   private void heapifyDown(Node<T> v) {
