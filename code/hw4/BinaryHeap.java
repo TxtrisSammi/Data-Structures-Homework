@@ -3,11 +3,11 @@ public class BinaryHeap<T extends Comparable<T>> {
   public static void main(String[] args) {
     BinaryHeap<Integer> q = new BinaryHeap<>();
 
-    for (int i = 7; i > 0; i--)
+    for (int i = 8; i > 0; i--)
       q.add(i);
 
     System.out.println(q);
-    for (int i = 7; i > 0; i--) {
+    for (int i = 8; i > 0; i--) {
       System.out.printf("Extraction: %d, Size: %d%n", q.extract(), q.size);
       System.out.println(q);
     }
@@ -84,6 +84,49 @@ public class BinaryHeap<T extends Comparable<T>> {
 
   private void heapifyDown(Node<T> v) {
     // implement me
+
+    
+    // if (v != null && v.left != null && v.right != null) {
+    //   Node<T> min = v.left.compareTo(v.right) < 0 ? v.left : v.right;
+    //   Node<T> max = v.left.compareTo(v.right) >= 0 ? v.left : v.right;
+    //   if (v.compareTo(min) > 0) {
+    //     v.swap(min);
+    //     heapifyDown(min);
+    //   } else if (v.compareTo(max) > 0) {
+    //     v.swap(max);
+    //     heapifyDown(max);
+    //   } else if (v != null && v.left != null ^ v.right != null) {
+    //     Node<T> child = v.right == null ? v.left : v.right;
+    //     if (v.compareTo(min) > 0) {
+    //       v.swap(child);
+    //       heapifyDown(child);
+    //     }
+    //   }
+    // }
+
+    if (v == null) {
+            return;
+        }
+
+        Node<T> smallest = v;
+        Node<T> leftChild = v.left;
+        Node<T> rightChild = v.right;
+
+        // Find the smallest among the node, its left child, and its right child
+        if (leftChild != null && leftChild.compareTo(smallest) < 0) {
+            smallest = leftChild;
+        }
+        if (rightChild != null && rightChild.compareTo(smallest) < 0) {
+            smallest = rightChild;
+        }
+
+        // If the smallest is not the current node, swap them and recursively call heapifyDown
+        if (smallest != v) {
+            // Swap data values (assuming Node<T> holds the actual data)
+            v.swap(smallest);
+            // Recursively call heapifyDown on the swapped child
+            heapifyDown(smallest);
+        }
   }
 
   private void enqueue(Node<T> v) {
