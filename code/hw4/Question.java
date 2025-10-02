@@ -16,7 +16,7 @@ public class Question implements Comparable<Question> {
             heap.add(current);
         }
     }
-
+    public Scanner scan = new Scanner(System.in);
     public String statement;
     public String answer;
     public long duration;
@@ -30,7 +30,6 @@ public class Question implements Comparable<Question> {
     }
 
     public void ask() {
-        Scanner scan = new Scanner(System.in);
         // long start = System.nanoTime();
         System.out.printf("%s ", statement);
         String given = scan.next().trim();
