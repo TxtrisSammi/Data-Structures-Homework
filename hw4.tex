@@ -1,7 +1,7 @@
 \documentclass{homework}
-% \author{Tashfeen, Ahmad}
+\author{Morales, Samantha}
 \class{CSCI 2114: Tashfeen's Data Structures}
-% \date{\today}
+\date{\today}
 \title{Homework 4}
 \address{%
   Oklahoma City University, %
@@ -44,7 +44,9 @@ Do the plots confirm or overrule what we know about the runtimes
 linked and array lists? Discuss.
 
 \begin{sol}
-  They confirmed that
+  The search confirmed that linked list searches run in linear time and array list runs in constant time. 
+  The append confirmed that both append in constant time for the best case, however array list runs in linear for its worst case, 
+  while linked list continues to run in constant.
 \end{sol}
 
 \question Extend \texttt{Structure.java} to implement \texttt{Stack.java}
@@ -79,10 +81,9 @@ public class Sierpinski {
 }
 \end{lstlisting}
 
-\question \sloppy Finish implementing the \texttt{BinaryHeap.java}. You need
-to implement the methods \texttt{heapifyUp(Node<T> v)} and
-\texttt{heapifyDown(Node<T> v)}. Run the file and verify your
-implementation keeps the heap property.
+\question \sloppy Finish implementing the \texttt{BinaryHeap.java}. You need to implement the methods \\
+\texttt{heapifyUp(Node<T> v)} and
+\texttt{heapifyDown(Node<T> v)}. Run the file and verify your implementation keeps the heap property.
 
 \section*{Submission Instructions}
 
