@@ -29,18 +29,18 @@ public class ListExperiment {
    * @param sb The string builder to join the nanoseconds.
    */
   public static void appendTimes(int n, List<Integer> ls, StringBuilder sb) {
-    long start = -1;
-    for (int count = 0; count < 2; count++) {
-      sb.setLength(0);
-      ls = count == 0 ? new ArrayList<Integer>() : new LinkedList<Integer>();
-      for (int i = 1; i < n; i++) {
-        start = System.nanoTime();
-        ls.add(0);
-        sb.append(System.nanoTime() - start + ",");
-      }
-      sb.setLength(sb.length() - 1);
-      write("../../media/append.csv", sb.toString(), count == 1);
-    }
+    // long start = -1;
+    // for (int count = 0; count < 2; count++) {
+    // sb.setLength(0);
+    // ls = count == 0 ? new ArrayList<Integer>() : new LinkedList<Integer>();
+    // for (int i = 1; i < n; i++) {
+    // start = System.nanoTime();
+    // ls.add(0);
+    // sb.append(System.nanoTime() - start + ",");
+    // }
+    // sb.setLength(sb.length() - 1);
+    // write("../../media/append.csv", sb.toString(), count == 1);
+    // }
   }
 
   /**
@@ -63,6 +63,21 @@ public class ListExperiment {
    * @param sb The string builder to join the nanoseconds.
    */
   public static void searchTimes(int n, List<Integer> ls, StringBuilder sb) {
+    // long start = -1;
+    for (int count = 0; count < 2; count++) {
+      sb.setLength(0);
+      ls = count == 0 ? new ArrayList<Integer>() : new LinkedList<Integer>();
+      for (int i = 1; (Math.pow(2, i)) < n; i++) {
+          ls.clear();
+          int x = randomInteger(0, (int)Math.pow(2, i));
+          fillList(0, (int)Math.pow(2, i), ls);
+          long start = System.nanoTime();
+          binarySearch(ls, x, 0, ls.size() - 1);
+          sb.append(System.nanoTime() - start + ",");
+      }
+      sb.setLength(sb.length() - 1);
+      write("../../media/search.csv", sb.toString(), count == 1);
+    }
     return;
   }
 
@@ -74,6 +89,16 @@ public class ListExperiment {
    * @return Whether n was found in ls.
    */
   public static boolean binarySearch(List<Integer> ls, int n, int s, int r) {
+    while (s <= r) {
+      int mid = s + (r - s) / 2;
+      if (ls.get(mid) == n) {
+        return true;
+      } else if (ls.get(mid) < n) {
+        s = mid + 1;
+      } else if (ls.get(mid) > n) {
+        r = mid - 1;
+      }
+    }
     return false;
   }
 
