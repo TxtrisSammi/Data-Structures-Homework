@@ -1,4 +1,5 @@
 \documentclass{homework}
+\usepackage{graphicx}
 \author{Morales, Samantha}
 \class{CSCI 2114: Tashfeen's Data Structures}
 \date{\today}
@@ -50,8 +51,18 @@ linked and array lists? Discuss.
   while linked list continues to run in constant.
 \end{sol}
 
-\img<img1>[0.55]{Append Plot}{./media/List_append.png}
-\img<img2>[0.55]{Search Plot}{./media/List_search.png}
+\begin{figure}[htbp] % Adjust placement options as needed (h, t, b, p)
+  \begin{minipage}[t]{0.45\textwidth} % Adjust width as needed, [t] aligns tops
+    \centering
+    \includegraphics[width=\linewidth]{./media/List_append.png} % image1.png is your first image file
+  \end{minipage}
+  \hfil
+  \begin{minipage}[t]{0.45\textwidth} % Adjust width as needed, [t] aligns tops
+    \centering
+    \includegraphics[width=\linewidth]{./media/List_search.png} % image1.png is your first image file
+  \end{minipage}
+  \caption{List Plots}
+\end{figure}
 
 \question Extend \texttt{Structure.java} to implement \texttt{Stack.java}
 and \texttt{Queue.java} \ie
