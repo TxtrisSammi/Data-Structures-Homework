@@ -16,9 +16,9 @@ public class Balanced {
             if (stack.isEmpty()) {
                 balanced++;
             }
-            System.out.println(balanced / (i + 1));
+            // System.out.println(balanced / (i + 1));
         }
-        
+        System.out.println(balanced / count);
     }
 }
 

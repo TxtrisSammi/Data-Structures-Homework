@@ -44,10 +44,15 @@ Do the plots confirm or overrule what we know about the runtimes
 linked and array lists? Discuss.
 
 \begin{sol}
-  The search confirmed that linked list searches run in linear time and array list runs in constant time. 
-  The append confirmed that both append in constant time for the best case, however array list runs in linear for its worst case, 
+  The search confirmed that linked list searches run in linear time and array list runs in constant time.
+  The append confirmed that both append in constant time for the best case, however array list runs in linear for its worst case,
   while linked list continues to run in constant.
 \end{sol}
+
+\img<img>[0.65]{Append Plot}{./media/List_append.png}
+\img<img>[0.65]{Search Plot}{./media/List_search.png}
+
+\pagebreak
 
 \question Extend \texttt{Structure.java} to implement \texttt{Stack.java}
 and \texttt{Queue.java} \ie
@@ -67,8 +72,13 @@ public class Stack<T extends Comparable<T>> extends Structure<T> {...}
         ratio in the decimal point notation. Save the class in
         \texttt{Balance.java}.
   \item Use your queue implementation to draw the
-        \href{https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle}{Sierpinksi's triangle}.
+        \href{https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle}{Sierpinski's triangle}.
 \end{enumerate}
+
+\img<img>[1]{Balanced.java Screenshot}{./media/BalancedScreenshot.png}
+\img<img>[0.65]{Sierpinski.java Screenshot}{./media/SierpinskiScreenshot.png}
+
+\pagebreak
 
 \begin{lstlisting}[language=Java]
 public class Sierpinski {
@@ -85,6 +95,8 @@ public class Sierpinski {
 \texttt{heapifyUp(Node<T> v)} and
 \texttt{heapifyDown(Node<T> v)}. Run the file and verify your implementation keeps the heap property.
 
+\img<img>[0.65]{Binaryheap.java Screenshot}{./media/BinaryHeapScreenshot.png}
+
 \section*{Submission Instructions}
 
 \begin{enumerate}
@@ -92,5 +104,7 @@ public class Sierpinski {
         the homework.
   \item Turn in your, \texttt{ListExperiment.java, Stack.java, Queue.java, Balance.java, Sierpinski.java} and \texttt{BinaryHeap.java}.
 \end{enumerate}
+
+
 
 \end{document}
