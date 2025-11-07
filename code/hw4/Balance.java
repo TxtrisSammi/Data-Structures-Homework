@@ -1,4 +1,4 @@
-public class Balanced {
+public class Balance {
     public static void main(String[] args) {
         double balanced = 0;
         double count = 1000000;

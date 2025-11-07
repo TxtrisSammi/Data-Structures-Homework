@@ -5,7 +5,7 @@ public class Sierpinski {
 
   public void points(int x, int y, int w, int h, Queue<Coordinates> q, int r) {
     // implement me 
-    if (r == 8) {
+    if (r == 3) {
       q.push(new Coordinates(x, y, w, h));
       return;
     }
